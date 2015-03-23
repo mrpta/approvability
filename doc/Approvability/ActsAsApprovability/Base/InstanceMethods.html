@@ -1,0 +1,681 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: Approvability::ActsAsApprovability::Base::InstanceMethods
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../../';
+  framesUrl = "../../../frames.html#!Approvability/ActsAsApprovability/Base/InstanceMethods.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../_index.html">Index (I)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Approvability.html" title="Approvability (module)">Approvability</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../ActsAsApprovability.html" title="Approvability::ActsAsApprovability (module)">ActsAsApprovability</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Base.html" title="Approvability::ActsAsApprovability::Base (module)">Base</a></span></span>
+     &raquo; 
+    <span class="title">InstanceMethods</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: Approvability::ActsAsApprovability::Base::InstanceMethods
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/approvability/acts_as_approvability.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#awaiting_approval%3F-instance_method" title="#awaiting_approval? (instance method)">- (Boolean) <strong>awaiting_approval?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Looks for the presence of an appropreate <span class='object_link'><a href="../../Approval.html" title="Approvability::Approval (class)">Approvability::Approval</a></span> record.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_approval-instance_method" title="#create_approval (instance method)">- (Object) <strong>create_approval</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Saves and associated <span class='object_link'><a href="../../Approval.html" title="Approvability::Approval (class)">Approvability::Approval</a></span> record.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#destroy_and_clean_approvals-instance_method" title="#destroy_and_clean_approvals (instance method)">- (Object) <strong>destroy_and_clean_approvals</strong>(approvable) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Scrubbs the histroy of approvals as well as the approvable record itself.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_approval%3F-instance_method" title="#has_approval? (instance method)">- (Boolean) <strong>has_approval?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#requires_approval%21-instance_method" title="#requires_approval! (instance method)">- (Object) <strong>requires_approval!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sets the attr to true.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#requires_approval%3F-instance_method" title="#requires_approval? (instance method)">- (Boolean) <strong>requires_approval?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_submission_alert-instance_method" title="#send_submission_alert (instance method)">- (Object) <strong>send_submission_alert</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_and_approve-instance_method" title="#update_and_approve (instance method)">- (Object) <strong>update_and_approve</strong>(new_params, user = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Pass params for the approvable object to update.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="awaiting_approval?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>awaiting_approval?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Looks for the presence of an appropreate <span class='object_link'><a href="../../Approval.html" title="Approvability::Approval (class)">Approvability::Approval</a></span> record</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/approvability/acts_as_approvability.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_awaiting_approval?'>awaiting_approval?</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_approvals'>approvals</span><span class='period'>.</span><span class='id identifier rubyid_current'>current</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>?</span> <span class='kw'>true</span> <span class='op'>:</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_approval-instance_method">
+  
+    - (<tt>Object</tt>) <strong>create_approval</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Saves and associated <span class='object_link'><a href="../../Approval.html" title="Approvability::Approval (class)">Approvability::Approval</a></span> record</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+77
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/approvability/acts_as_approvability.rb', line 77</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_approval'>create_approval</span>
+  <span class='const'>Approval</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='label'>approvable_type:</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='label'>approvable_id:</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='label'>author_id:</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_author_id'>author_id</span><span class='rparen'>)</span>
+  <span class='const'>Notifier</span><span class='period'>.</span><span class='id identifier rubyid_approval_required'>approval_required</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_deliver'>deliver</span> <span class='comment'># Sends an email to the admin to allow them to approve this object
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="destroy_and_clean_approvals-instance_method">
+  
+    - (<tt>Object</tt>) <strong>destroy_and_clean_approvals</strong>(approvable) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Scrubbs the histroy of approvals as well as the approvable record itself</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/approvability/acts_as_approvability.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_destroy_and_clean_approvals'>destroy_and_clean_approvals</span><span class='lparen'>(</span><span class='id identifier rubyid_approvable'>approvable</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_approvable'>approvable</span><span class='period'>.</span><span class='id identifier rubyid_approvals'>approvals</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span>
+    <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_destroy'>destroy</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_approvable'>approvable</span><span class='period'>.</span><span class='id identifier rubyid_destroy'>destroy</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_approval?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>has_approval?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/approvability/acts_as_approvability.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_has_approval?'>has_approval?</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_approvals'>approvals</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>?</span> <span class='kw'>true</span> <span class='op'>:</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="requires_approval!-instance_method">
+  
+    - (<tt>Object</tt>) <strong>requires_approval!</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sets the attr to true</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/approvability/acts_as_approvability.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_requires_approval!'>requires_approval!</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_requires_approval'>requires_approval</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_active'>active</span> <span class='op'>=</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="requires_approval?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>requires_approval?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/approvability/acts_as_approvability.rb', line 45</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_requires_approval?'>requires_approval?</span>
+  <span class='id identifier rubyid_requires_approval'>requires_approval</span> <span class='op'>?</span> <span class='kw'>true</span> <span class='op'>:</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_submission_alert-instance_method">
+  
+    - (<tt>Object</tt>) <strong>send_submission_alert</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/approvability/acts_as_approvability.rb', line 72</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send_submission_alert'>send_submission_alert</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_and_approve-instance_method">
+  
+    - (<tt>Object</tt>) <strong>update_and_approve</strong>(new_params, user = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Pass params for the approvable object to update. If they include an
+approval we&#39;ll process that as well</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57
+58
+59
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/approvability/acts_as_approvability.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_and_approve'>update_and_approve</span><span class='lparen'>(</span><span class='id identifier rubyid_new_params'>new_params</span><span class='comma'>,</span> <span class='id identifier rubyid_user'>user</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='comment'># Process the apporval if required
+</span>  <span class='kw'>unless</span> <span class='id identifier rubyid_new_params'>new_params</span><span class='lbracket'>[</span><span class='symbol'>:approvals_attributes</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_accepted'>accepted</span> <span class='op'>=</span> <span class='const'>Approval</span><span class='period'>.</span><span class='id identifier rubyid_process'>process</span><span class='lparen'>(</span><span class='id identifier rubyid_new_params'>new_params</span><span class='lbracket'>[</span><span class='symbol'>:approvals_attributes</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_user'>user</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_new_params'>new_params</span><span class='lbracket'>[</span><span class='symbol'>:active</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_accepted'>accepted</span>
+  <span class='kw'>end</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update_attributes'>update_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_new_params'>new_params</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Thu Mar 12 18:39:24 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>

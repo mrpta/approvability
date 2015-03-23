@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!file.README.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'>
+<h1 id="label-Approvability">Approvability</h1>
+
+<p>This is a quick and dirty approval system, allowing you to offer a
+submission and approval system that is agnostic to the model type it is
+approving. A quick example may be better than anything:</p>
+
+<p>I&#39;ve got the following models: Article and Product. Any registered user
+can submit articles and products. Any administrator can approve articles
+and products for public consumption. This gem does some of the heavy
+lifting.</p>
+
+<h2 id="label-Install">Install</h2>
+<ol><li>
+<p>Add the following to your Gemfile:</p>
+
+<pre class="ruby"><span class="ruby-identifier">gem</span> <span class="ruby-string">&#39;approvability&#39;</span>, :<span class="ruby-identifier">git</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;//pretend/path/to/repo&quot;</span>
+</pre>
+</li><li>
+<p>Run the following rake task to generate some necessary files:</p>
+
+<pre class="code ruby"><code class="ruby">$ rake approvability:configure</code></pre>
+</li><li>
+<p>Edit the file it adds to <code>config/</code> (make sure you restart your
+app at some point after this!)</p>
+</li><li>
+<p>Install the migrations:</p>
+
+<pre class="code ruby"><code class="ruby">$ rake approvability:install:migrations</code></pre>
+
+<p>Before running these migrations see "Additional Steps For Ease Of Use" step
+two, just in case.</p>
+</li><li>
+<p>And then add the following to each of the models that will be approvable:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_acts_as_approvability'>acts_as_approvability</span></code></pre>
+</li></ol>
+
+<h2 id="label-Additional+Steps+For+Ease+Of+Use">Additional Steps For Ease Of Use</h2>
+<ol><li>
+<p>I&#39;ve got a model set up in my app as <code>approval.rb</code> in which
+I&#39;ve put the code:</p>
+
+<pre class="ruby"><span class="ruby-keyword">class</span> <span class="ruby-constant">Approval</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>
+        <span class="ruby-identifier">extend</span> <span class="ruby-constant">Approvability</span><span class="ruby-operator">::</span><span class="ruby-constant">Approval</span>
+<span class="ruby-keyword">end</span>
+</pre>
+</li><li>
+<p>After this you&#39;ll want to change <code>approvability_approvals</code>
+to just <code>approvals</code> in the migrations</p>
+</li></ol>
+
+<h2 id="label-Great+Big+Gotchas">Great Big Gotchas</h2>
+
+<p>Currently the gem expects a number of forceful defaults, like the presence
+of two fields: <code>author_id</code> and <code>active</code> on each of
+the models that are approvable.</p>
+
+<p>It expects you to have a <code>has_many</code> / <code>belongs_to</code>
+relationship between Author and any other model that
+<code>acts_as_approvability</code>.</p>
+
+<h2 id="label-Todo">Todo</h2>
+<ul><li>
+<p>Write good tests</p>
+</li><li>
+<p>Integrate mailers for approvals</p>
+</li><li>
+<p>Integrate view generators and helpers</p>
+</li></ul>
+</div></div>
+
+    <div id="footer">
+  Generated on Thu Mar 12 18:39:24 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>

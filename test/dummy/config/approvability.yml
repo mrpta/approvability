@@ -1,0 +1,3 @@
+# I'm a configuration file, please populate me
+default_from_email: "default@email.com"
+default_from_name: "Approvability Plugin"

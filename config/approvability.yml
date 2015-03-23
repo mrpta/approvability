@@ -1,0 +1,9 @@
+# I'm a configuration file, please populate me
+default_from_email: "example@approvability.com"
+default_from_name: "Example Email"
+
+owner_name: "Example Person"
+owner_email: "test@example.com"
+
+website_url: "https://www.thecorporatetoolbox.com"
+website_logo: "https://www.thecorporatetoolbox.com/images/logo.jpg"

@@ -1,0 +1,23 @@
+<html>
+	<body>
+		<table width = '595' cellspacing = '0' cellpadding = '2' align = 'center'>
+			<tr>
+				<td align = 'center'>
+					<a href = "<%= @url %>"><img src = '<%= @img %>' border = '0' /></a>
+				</td>
+			</tr>
+			<tr>
+				<td align = 'left'>
+					<p>Dear <%= @object.author.name %>,</p>
+					
+					<p>This is to let you know that the <%= @type %> you recently submitted to <%= @business %><%= @titled %> has been approved and published to the website.</p>
+					
+					<p>You can view it <%= link_to "here", main_app.polymorphic_url(@object) %>. If you have any questions, please do not hesitate to contact us.</p>
+					
+					<p>Kind regards,
+						<br /><%= @owner %>, and the <%= @business %> team.</p>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
