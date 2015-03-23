@@ -75,7 +75,9 @@ module Approvability
 
         # Saves and associated {Approval} record
         def create_approval
-          Approval.create(approvable_type: self.class.name, approvable_id: self.id, author_id: self.author_id)
+          a = Approval.new(approvable_type: self.class.name, approvable_id: self.id)
+          a.author_id = self.author_id unless self.class.name == "Author"
+          a.save
           Notifier.approval_required(self).deliver # Sends an email to the admin to allow them to approve this object
         end
       end
