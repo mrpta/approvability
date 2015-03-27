@@ -34,18 +34,6 @@ I've got the following models: Article and Product. Any registered user can subm
 	acts_as_approvability
 	```
 	
-## Additional Steps For Ease Of Use
-
-1. I've got a model set up in my app as +approval.rb+ in which I've put the code:
-
-	```
-	class Approval < ActiveRecord::Base
-		extend Approvability::Approval
-	end
-	```
-
-2. After this you'll want to change +approvability_approvals+ to just +approvals+ in the migrations
-	
 ## Great Big Gotchas
 	
 Currently the gem expects a number of forceful defaults, like the presence of two fields: +author_id+ and +active+ on each of the models that are approvable.
