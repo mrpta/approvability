@@ -24,12 +24,14 @@ module Approvability
         @type = "expert profile" 
         @titled = ""
         title = ""
+        email = @object.user.email
       else
         @type = approval.object_name.downcase
         @titled = " entitled \"#{approval.common_name}\""
         title = " \"#{approval.common_name}\""
+        email = @object.author.user.email
       end
-      mail(to: @object.author.user.email, subject: "Your #{@type}#{title} has been approved")
+      mail(to: email, subject: "Your #{@type}#{title} has been approved")
     end
     
     def get_config

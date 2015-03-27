@@ -10,7 +10,7 @@
 				<td align = 'left'>
 					<p>Dear <%= @owner %>,</p>
 					
-					<p>This is to let you know that <%= link_to @author.name, author_url(@author) %> has submitted a new <%= @approval.object_name.downcase %> entitled: "<%= @approval.common_name %>".</p>
+					<p>This is to let you know that <%= link_to @author.name, main_app.author_url(@author) %> has submitted a new <%= @approval.object_name.downcase %> entitled: "<%= @approval.common_name %>".</p>
 					
 					<p><b>Take Action:</b></p>
 					
