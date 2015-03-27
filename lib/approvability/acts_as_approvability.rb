@@ -15,7 +15,7 @@ module Approvability
           attr_accessor :requires_approval
 
           # All Approvability models have polymorphic relationships with the Approval model
-          has_many :approvals, as: :approvable
+          has_many :approvals, as: :approvable, class_name: Approvability::Approval
           # Saves the approval automatically whenever models are flagged with {#requires_approval!} from a controller
           after_create :create_approval, if: :requires_approval
           accepts_nested_attributes_for :approvals
@@ -78,7 +78,7 @@ module Approvability
           a = Approval.new(approvable_type: self.class.name, approvable_id: self.id)
           a.author_id = self.author_id unless self.class.name == "Author"
           a.save
-          Notifier.approval_required(self).deliver # Sends an email to the admin to allow them to approve this object
+          Approvability::Notifier.approval_required(self).deliver # Sends an email to the admin to allow them to approve this object
         end
       end
     end
