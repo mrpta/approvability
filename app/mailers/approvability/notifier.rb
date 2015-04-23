@@ -21,11 +21,13 @@ module Approvability
       get_config
       @object = approval.approvable
       if approval.object_name == "Expert"
+        @name = @object.user.name
         @type = "expert profile" 
         @titled = ""
         title = ""
         email = @object.user.email
-      else
+      else  
+        @name = @object.author.user.name
         @type = approval.object_name.downcase
         @titled = " entitled \"#{approval.common_name}\""
         title = " \"#{approval.common_name}\""
