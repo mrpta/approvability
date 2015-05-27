@@ -26,8 +26,6 @@ I've got the following models: Article and Product. Any registered user can subm
 	$ rake approvability:install:migrations
 	```
 	
-	Before running these migrations see "Additional Steps For Ease Of Use" step two, just in case.
-	
 5. And then add the following to each of the models that will be approvable:
 
 	```
