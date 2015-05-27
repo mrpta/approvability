@@ -36,12 +36,11 @@ I've got the following models: Article and Product. Any registered user can subm
 	
 ## Great Big Gotchas
 	
-Currently the gem expects a number of forceful defaults, like the presence of two fields: +author_id+ and +active+ on each of the models that are approvable.
+Currently the gem expects a number of forceful defaults, like the presence of two fields: `author_id` and `active` on each of the models that are approvable.
 
-It expects you to have a +has_many+ / +belongs_to+ relationship between Author and any other model that +acts_as_approvability+.
+It expects you to have a `has_many` / `belongs_to` relationship between Author and any other model that `acts_as_approvability`.
 
 ## Todo
 
 * Write good tests
-* Integrate mailers for approvals
 * Integrate view generators and helpers
