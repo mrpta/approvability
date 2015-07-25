@@ -20,7 +20,7 @@ module Approvability
 
     # Generates a unique
     def generate_token(column="public_key", length = 64)
-      if self[column].empty?
+      if self[column].nil?
         begin
           self[column] = SecureRandom.urlsafe_base64 length
         end while Approvability::Approval.exists?(column => self[column])
