@@ -19,7 +19,7 @@
 					<p><%= link_to "Approve & Publish The #{@object.class.name}", main_app.from_email_admin_approval_url(id: @public_key, verdict: "approve", user_id: ENV['ADMIN_USER_ID']) %></p>
 					<p><%= link_to "Mark #{@object.class.name} As Rejected", main_app.from_email_admin_approval_url(id: @public_key, verdict: "reject", user_id: ENV['ADMIN_USER_ID']) %></p>
 					
-					<p><%= "You can contact the author on "+mail_to(@author.email, @author.email) if @author.email %></p>
+					<p><%= "You can contact the author on "+mail_to(@author.email, @author.email).html_safe if @author.email %></p>
 				</td>
 			</tr>
 		</table>
