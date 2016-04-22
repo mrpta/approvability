@@ -1,7 +1,7 @@
 module Approvability
   class Notifier < ActionMailer::Base
   
-    default :from => "#{Approvability::Engine.configuration["default_from_email"]} <#{Approvability::Engine.configuration["default_from_name"]}>"
+    default :from => "#{Approvability::Engine.configuration["default_from_email"]}"
   
     def approval_required(object)
       get_config
