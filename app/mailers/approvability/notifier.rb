@@ -27,7 +27,7 @@ module Approvability
         title = ""
         email = @object.user.email
       else  
-        @name = @object.author.user.name
+        @name = (@object.author.user ? @object.author.user.name : @object.author.name)
         @type = approval.object_name.downcase
         @titled = " entitled \"#{approval.common_name}\""
         title = " \"#{approval.common_name}\""
